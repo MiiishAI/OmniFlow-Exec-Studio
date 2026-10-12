@@ -1,10 +1,13 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig} from 'vite';
+import { defineConfig } from 'vite';
+
+const isGithubPages = process.env.GITHUB_ACTIONS === 'true';
 
 export default defineConfig(() => {
   return {
+    base: isGithubPages ? '/OmniFlow-Exec-Studio/' : '/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
