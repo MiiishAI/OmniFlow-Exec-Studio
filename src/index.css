@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+:root,
+[data-theme="executive_gold"] {
+  --bg-app: #121316;
+  --bg-surface: #16171D;
+  --bg-elevated: #1A1B20;
+  --bg-input: #16171D;
+  --bg-hover: #22242B;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-accent: rgba(212, 175, 55, 0.35);
+  --border-brand: #d4af37;
+  --color-primary: #d4af37;
+  --color-primary-light: #e5c158;
+  --color-secondary: #f7bd48;
+  --text-main: #F5F5F7;
+  --text-muted: #797C86;
+  --text-secondary: #B8BAC2;
+  --scrollbar-thumb: rgba(212, 175, 55, 0.25);
+  --scrollbar-thumb-hover: rgba(212, 175, 55, 0.45);
+}
+
+[data-theme="space_tech"] {
+  --bg-app: #060814;
+  --bg-surface: #0B0F24;
+  --bg-elevated: #111736;
+  --bg-input: #080C1E;
+  --bg-hover: #182046;
+  --border-subtle: rgba(0, 240, 255, 0.12);
+  --border-accent: rgba(0, 240, 255, 0.45);
+  --border-brand: #00F0FF;
+  --color-primary: #00F0FF;
+  --color-primary-light: #38BDF8;
+  --color-secondary: #8B5CF6;
+  --text-main: #F0F6FC;
+  --text-muted: #818CF8;
+  --text-secondary: #C7D2FE;
+  --scrollbar-thumb: rgba(0, 240, 255, 0.25);
+  --scrollbar-thumb-hover: rgba(0, 240, 255, 0.5);
+}
+
+[data-theme="business_pro"] {
+  --bg-app: #0B0F19;
+  --bg-surface: #111827;
+  --bg-elevated: #1E293B;
+  --bg-input: #0F172A;
+  --bg-hover: #24334A;
+  --border-subtle: rgba(148, 163, 184, 0.12);
+  --border-accent: rgba(59, 130, 246, 0.45);
+  --border-brand: #3B82F6;
+  --color-primary: #3B82F6;
+  --color-primary-light: #60A5FA;
+  --color-secondary: #2563EB;
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --text-secondary: #CBD5E1;
+  --scrollbar-thumb: rgba(59, 130, 246, 0.25);
+  --scrollbar-thumb-hover: rgba(59, 130, 246, 0.5);
+}
+
+@layer base {
+  body {
+    background-color: var(--bg-app);
+    color: var(--text-main);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+}
+
+.pb-safe {
+  padding-bottom: max(env(safe-area-inset-bottom, 16px), 16px);
+}
+
+/* Dynamic theme scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Subtle cosmic grid overlay for Space Tech */
+[data-theme="space_tech"] body {
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 100% 100%, rgba(139, 92, 246, 0.06) 0%, transparent 50%),
+    linear-gradient(to right, rgba(0, 240, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+}
+
+/* Clean enterprise gradient for Modern Business */
+[data-theme="business_pro"] body {
+  background-image: 
+    radial-gradient(circle at 50% -20%, rgba(59, 130, 246, 0.12) 0%, transparent 55%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 100% 100%, 48px 48px, 48px 48px;
+}
+
+/* Luxury gold ambient glow for Executive Gold */
+[data-theme="executive_gold"] body {
+  background-image: 
+    radial-gradient(circle at 50% -20%, rgba(212, 175, 55, 0.07) 0%, transparent 55%);
+}

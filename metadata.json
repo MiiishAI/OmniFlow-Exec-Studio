@@ -1,0 +1,6 @@
+{
+  "name": "OmniFlow — Executive Command Center",
+  "description": "Executive Business Casual productivity, sales CRM & focus command center with structured initiatives, critical path tracking, and focus sprints.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

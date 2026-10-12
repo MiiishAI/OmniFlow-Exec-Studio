@@ -1,0 +1,39 @@
+{
+  "name": "OmniFlow — Executive Command Center",
+  "short_name": "OmniFlow",
+  "description": "Executive Business Casual productivity, sales CRM & focus command center.",
+  "start_url": "/",
+  "id": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#121316",
+  "theme_color": "#121316",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["productivity", "business"],
+  "icons": [
+    {
+      "src": "/icon-512x512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Command Center",
+      "url": "/#overview",
+      "description": "Open Executive Overview"
+    },
+    {
+      "name": "Tasks Hub",
+      "url": "/#tasks",
+      "description": "Inspect Critical Path Tasks"
+    },
+    {
+      "name": "Projects Terminal",
+      "url": "/#projects",
+      "description": "View Strategic Initiatives"
+    }
+  ]
+}

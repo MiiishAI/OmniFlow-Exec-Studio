@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" fill="#121316"/>
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE088"/>
+      <stop offset="40%" stop-color="#E5C158"/>
+      <stop offset="70%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </linearGradient>
+    <radialGradient id="ambientGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#121316" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Subtle ambient halo -->
+  <circle cx="256" cy="256" r="210" fill="url(#ambientGlow)"/>
+  
+  <!-- Outer subtle hairline rim -->
+  <circle cx="256" cy="256" r="236" fill="none" stroke="rgba(212, 175, 55, 0.2)" stroke-width="2"/>
+  
+  <!-- Executive Infinity Emblem with Telemetry Flow -->
+  <g transform="translate(256,256) scale(1.15) translate(-256,-256)">
+    <!-- Infinity loop base shadow -->
+    <path d="M168,256 C168,207 207,168 256,217 C305,266 344,305 344,256 C344,207 305,168 256,217 C207,266 168,305 168,256 Z" 
+          fill="none" stroke="#22242B" stroke-width="28" stroke-linecap="round"/>
+    
+    <!-- Primary Golden Infinity Track -->
+    <path d="M170,256 C170,210 208,172 256,220 C304,268 342,302 342,256 C342,210 304,172 256,220 C208,268 170,302 170,256 Z" 
+          fill="none" stroke="url(#goldGrad)" stroke-width="20" stroke-linecap="round"/>
+          
+    <!-- Dynamic Pulse Wave Line -->
+    <path d="M96,256 L180,256 L205,225 L230,290 L256,240 L282,275 L307,256 L416,256" 
+          fill="none" stroke="#F5F5F7" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+          
+    <!-- Core Focal Pip -->
+    <circle cx="256" cy="240" r="6" fill="#FFE088"/>
+  </g>
+</svg>
